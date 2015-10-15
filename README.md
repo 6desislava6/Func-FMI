@@ -1,6 +1,8 @@
 # Functional Programming 2015
 
 Functional Programming for 2nd year CS students at FMI / Sofia University.
+Repo - https://github.com/fmi/fp2015
+Forked - https://github.com/6desislava6/fp2015
 
 ## Intro materials
 
