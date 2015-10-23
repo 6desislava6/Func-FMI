@@ -1,4 +1,5 @@
 #lang racket
+(provide is-palindrome?)
 (define (string-reverse str)
   (define (string-inside counter reversed)
     (if (= 0 counter) (string-append reversed (~a (string-ref str 0)))
@@ -69,7 +70,4 @@
     )
   (contains-iter (quotient y 10) (remainder y 10))
   )
-(contains-digits? 123 23)
-(contains-digits? 123 71)
-(contains-digits? 123 1)
-(contains-digits? 123 12)
+

@@ -17,6 +17,10 @@
 
 ;-> (string->number "111")
 ;111
+
+(provide
+  string-reverse)
+(provide to-binary-string)
 (define (string-reverse str)
   (define (string-inside counter reversed)
     (if (= 0 counter) (string-append reversed (~a (string-ref str 0)))
@@ -42,8 +46,3 @@
   (powers-inside (string-length binary-str) 0 0)
  )
 
-(from-binary-string "1")
-(from-binary-string "1101111")
-(from-binary-string "101010")
-(from-binary-string "100")
-(from-binary-string "11")

@@ -1,4 +1,7 @@
 #lang racket
+
+(provide string-repeat)
+
 (define (string-repeat str n)
   (define (string-repeat-inside counter result)
     (if (= counter (- n 1)) (string-append result str)
@@ -11,4 +14,4 @@
     (string-append (string-append (string-append (string-append (string-append (string-append "{" dashes) ">") (number->string n)) "<") dashes) "}")
     )  
   )
-(fence 100)
+
