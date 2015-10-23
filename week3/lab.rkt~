@@ -1,4 +1,5 @@
 #lang racket
+(provide is-palindrome??)
 (define (string-reverse str)
   (define (string-inside counter reversed)
     (if (= 0 counter) (string-append reversed (~a (string-ref str 0)))
@@ -60,7 +61,13 @@
 
 (define (contains-digits? x y)
 ;current is initially y!
-  (define (contains-iter current)
+  (define (contains-iter current searched-number)
     (cond
-      [(< current 10) (> (occurences? ]
-      [
+      [(= current 0) (> (occurences searched-number x) 0)]
+      [(> (occurences searched-number x) 0) (contains-iter (quotient current 10) (remainder current 10))]
+      [else #f]
+      )
+    )
+  (contains-iter (quotient y 10) (remainder y 10))
+  )
+
